@@ -19,10 +19,23 @@ const renderInstrument = (instrument) => {
     p.textContent = usd;
     li.appendChild(p);
 
+    const saleP = document.createElement('p');
+    saleP.className = 'sale price';
+
+    const saleUsd = '$' + instrument.salePrice.toFixed(2);
+    saleP.textContent = saleUsd;
+    li.appendChild(saleP);
+
+    const discountP = document.createElement('p');
+    discountP.className = 'discount';
+
+    const discount = `${instrument.calcDiscount()}% off!`;
+    discountP.textContent = discount;
+    li.appendChild(discountP);
+
     const button = document.createElement('button');
     button.textContent = 'Add to Cart';
     li.appendChild(button);
-
 
     return li;
 };

@@ -2,8 +2,16 @@
     box-sizing: border-box;
     font-family: 'Source Code Pro', monospace;
 }
+.title-header {
+    background: lightcoral;
+    border: 2px dashed black;
+}
 h1 {
     font-weight: bold;
+    text-align: center;
+}
+h2 {
+    text-align: center;
 }
 a {
     text-decoration: none;
@@ -11,21 +19,35 @@ a {
 }
 ul {
     list-style: none;
-    width: 33%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    align-items: space-around;
+    flex-wrap: wrap;
 }
 ul img {
-    height: 50px;
+    width: 50%;
+    height: 150px;
 }
 li {
-    border: 10px solid black;
+    border: 5px solid black;
     border-radius: 5px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5px;
-    border-radius: 5px;
+    width: 30%;
+    margin: 5px;
+    padding-bottom: 10px;
+}
+li:hover {
+    transform:translate(5px, -5px); 
+    transition-duration: 500ms;
+    box-shadow: -5px 5px 10px black;
+}
+button {
+    background: lightcoral;
+    border: 2px dashed black;
+}
+button:hover {
+    cursor: pointer;
 }
