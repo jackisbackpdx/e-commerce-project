@@ -3,7 +3,7 @@
     font-family: 'Source Code Pro', monospace;
 }
 body {
-    background: turquoise
+    background: orange;
 }
 .title-header {
     background: lightcoral;
@@ -31,6 +31,7 @@ ul {
 ul img {
     width: 50%;
     height: 150px;
+    border: 2px dashed red;
 }
 li {
     border: 5px solid black;
@@ -41,6 +42,7 @@ li {
     width: 30%;
     margin: 5px;
     padding-bottom: 10px;
+    background-color: grey;
 }
 li:hover {
     transform:translate(5px, -5px); 
@@ -56,4 +58,9 @@ button:hover {
 }
 .price {
     text-decoration: line-through;
+    color: crimson;
+    font-weight: bold;
+}
+.saleprice {
+    font-weight: bold;
 }

@@ -20,7 +20,7 @@ const renderInstrument = (instrument) => {
     li.appendChild(p);
 
     const saleP = document.createElement('p');
-    saleP.className = 'sale price';
+    saleP.className = 'saleprice';
 
     const saleUsd = '$' + instrument.salePrice.toFixed(2);
     saleP.textContent = saleUsd;
