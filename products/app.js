@@ -58,14 +58,46 @@ const focusrite = {
         return Math.floor(((this.price - this.salePrice) / this.price) * 100);
     }
 };
+const drumKit = {
+    id: 'focusrite',
+    name: 'Focusrite Audio Interface',
+    image: '../images/drumkit.jpeg',
+    description: 'Electric drum pad operated by pressing buttons',
+    category: 'Drums',
+    price: 59.99,
+    salePrice: 49.99,
+    calcDiscount: function() {
+        return Math.floor(((this.price - this.salePrice) / this.price) * 100);
+    }
+};
 
 const instruments = [
     acousticGuitar,
     audioInterface,
     drumPad,
     electricGuitar,
-    focusrite
+    focusrite,
+    drumKit
 ];
 
 export default instruments;
 
+export const cart = [{
+    code: 'Acoustic Guitar',
+    quantity: 1
+}, {
+    code: 'Audio Interface',
+    quantity: 2
+}, {
+    code: 'Drum Pad',
+    quantity: 1
+}, {
+    code: 'Electric Guitar',
+    quantity: 2
+}, {
+    code: 'Focusrite',
+    quantity: 1
+}, {
+    code: 'Drum Kit',
+    quantity: 1
+}];
