@@ -1,5 +1,5 @@
 import renderInstrument from '../products/renderfunction.js';
-import renderTableRow from '../shopping-cart/render-table-row.js';
+import { makeTr } from '../shopping-cart/render-table-row.js';
 
 const test = QUnit.test;
 
@@ -44,15 +44,15 @@ test('renders a table row', assert => {
     };
 
     const cart = {
-        code: 'guitar',
+        code: 'Acoustic Guitar',
         quantity: 2
     };
 
 
     // act
-    const expected = `<tr><td>guitar</td><td>2</td><td>$55</td><td>$180</td></tr>`;
+    const expected = `<tr><td>Acoustic Guitar</td><td>2</td><td>$55.00</td><td>$110.00</td></tr>`;
     
-    const dom = renderTableRow(cart, acousticGuitar);
+    const dom = makeTr(acousticGuitar, cart);
     const html = dom.outerHTML;
     // assert
     assert.equal(html, expected);

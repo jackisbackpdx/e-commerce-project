@@ -9,12 +9,12 @@ export const makeTd = (content) => {
 
 
 
-const makeTr = (instrument, order) => {
+export const makeTr = (instrument, order) => {
     const tableRow = document.createElement('tr');
 
-    const price = instrument.price;
+    const price = instrument.salePrice;
     const prettyPrice = makePrettyPrice(price);
-    const totalPrice = order.quantity * instrument.price;
+    const totalPrice = order.quantity * instrument.salePrice;
     const prettyTotal = makePrettyPrice(totalPrice);
 
     tableRow.appendChild(makeTd(instrument.name));
@@ -23,5 +23,3 @@ const makeTr = (instrument, order) => {
     tableRow.appendChild(makeTd(prettyTotal));
     return tableRow;
 };
-
-export { makeTr as default };
