@@ -1,5 +1,5 @@
 const acousticGuitar = {
-    id: 'acoustic guitar',
+    code: 'Acoustic Guitar',
     name: 'Acoustic Guitar',
     image: '../images/acousticguitar.jpg',
     description: 'Wooden acoustic guitar with wonderful melodic frequencies and harminous tones',
@@ -11,7 +11,7 @@ const acousticGuitar = {
     }
 };
 const audioInterface = {
-    id: 'advanced audio interface, meant for advanced sound engineers',
+    code: 'Audio Interface',
     name: 'Subatomic Audio Interface',
     image: '../images/audiointerface.jpg',
     description: 'This is a high quality instrument transmission device',
@@ -23,7 +23,7 @@ const audioInterface = {
     }
 };
 const drumPad = {
-    id: 'Electric Drum Pad',
+    code: 'Electric Drum Pad',
     name: '9800 Martin\'s Drum Pad',
     image: '../images/drumpad.jpg',
     description: 'Electric drum pad operated by pressing buttons',
@@ -35,7 +35,7 @@ const drumPad = {
     }
 };
 const electricGuitar = {
-    id: 'Electric Guitar',
+    code: 'Electric Guitar',
     name: 'Fender Guitar',
     image: '../images/electricguitar.jpg',
     description: 'Rock out to some riffs',
@@ -47,7 +47,7 @@ const electricGuitar = {
     }
 };
 const focusrite = {
-    id: 'focusrite',
+    code: 'Focusrite',
     name: 'Focusrite Audio Interface',
     image: '../images/focusrite.jpg',
     description: 'Electric drum pad operated by pressing buttons',
@@ -59,7 +59,7 @@ const focusrite = {
     }
 };
 const drumKit = {
-    id: 'focusrite',
+    code: 'Drum Kit',
     name: 'Focusrite Audio Interface',
     image: '../images/drumkit.jpeg',
     description: 'Electric drum pad operated by pressing buttons',
@@ -71,7 +71,7 @@ const drumKit = {
     }
 };
 
-const instruments = [
+export const instruments = [
     acousticGuitar,
     audioInterface,
     drumPad,
@@ -80,7 +80,6 @@ const instruments = [
     drumKit
 ];
 
-export default instruments;
 
 export const cart = [{
     code: 'Acoustic Guitar',
@@ -89,14 +88,8 @@ export const cart = [{
     code: 'Audio Interface',
     quantity: 2
 }, {
-    code: 'Drum Pad',
-    quantity: 1
-}, {
-    code: 'Electric Guitar',
-    quantity: 2
-}, {
     code: 'Focusrite',
-    quantity: 1
+    quantity: 4
 }, {
     code: 'Drum Kit',
     quantity: 1

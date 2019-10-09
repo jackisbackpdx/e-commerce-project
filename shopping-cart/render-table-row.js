@@ -1,6 +1,6 @@
 import { makePrettyPrice } from './make-pretty-price.js';
 
-export const makeTd = (content) => {
+const makeTd = (content) => {
     const tdElement = document.createElement('td');
     tdElement.textContent = content;
 

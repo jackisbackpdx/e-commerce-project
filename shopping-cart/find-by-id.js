@@ -8,6 +8,7 @@ export function findProducts(instruments, code) {
     return null;
 }
 
+
 export const calcLineTotal = (quantity, price) => {
     return Number(quantity * price).toFixed(2);
 };
