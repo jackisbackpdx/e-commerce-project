@@ -10,5 +10,5 @@ export function findProducts(instruments, code) {
 
 
 export const calcLineTotal = (quantity, price) => {
-    return Number(quantity * price).toFixed(2);
+    return Number((quantity * price));
 };

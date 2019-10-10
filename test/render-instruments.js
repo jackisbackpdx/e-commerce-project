@@ -28,7 +28,7 @@ test('renders an instrument', assert => {
     assert.equal(html, expected);
 });
 
-test('renders a table row', assert => {
+test('renders a table row when given an instrument and line item (cart with an instrument)', assert => {
     // arrange
     const acousticGuitar = {
         id: 'Acoustic Guitar',
@@ -56,4 +56,35 @@ test('renders a table row', assert => {
     const html = dom.outerHTML;
     // assert
     assert.equal(html, expected);
+});
+
+
+test('calculates total price by multiplying by quantity', assert => {
+    // arrange
+    const acousticGuitar = {
+        id: 'Acoustic Guitar',
+        name: 'Acoustic Guitar',
+        image: '../images/acousticguitar.jpg',
+        description: 'Wooden acoustic guitar with wonderful melodic frequencies and harminous tones',
+        category: 'Guitar',
+        price: 75.00,
+        salePrice: 55.00,
+        calcDiscount: function() {
+            return Math.floor(((this.price - this.salePrice) / this.price) * 100);
+        }
+    };
+
+    const cart = {
+        code: 'Acoustic Guitar',
+        quantity: 2
+    };
+
+
+    // act
+    const expected = 110.00;
+    const totalPrice = (order, instrument) => order.quantity * instrument.salePrice;
+    const acousticGuitarPrice = totalPrice(cart, acousticGuitar);
+
+    // assert
+    assert.equal(acousticGuitarPrice, expected);
 });
