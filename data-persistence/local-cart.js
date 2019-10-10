@@ -36,3 +36,4 @@ for (let i = 0; i < instruments.length; i++) {
         localStorage.setItem('CART', json);
 
     });
+}
