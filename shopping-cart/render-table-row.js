@@ -1,12 +1,12 @@
 import { makePrettyPrice } from './make-pretty-price.js';
 
-const makeTd = (content) => {
+
+export const makeTd = (content) => {
     const tdElement = document.createElement('td');
     tdElement.textContent = content;
 
     return tdElement;
 };
-
 
 
 export const makeTr = (instrument, order) => {
@@ -23,4 +23,5 @@ export const makeTr = (instrument, order) => {
     tableRow.appendChild(makeTd(prettyTotal));
     return tableRow;
 };
+
 

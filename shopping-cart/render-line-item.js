@@ -2,6 +2,8 @@ import { findProducts } from './find-by-id.js';
 import { makeTr } from './render-table-row.js';
 import { instruments } from '../products/app.js';
 import { cart } from '../data/cart.js';
+import totalCost from './commons.js';
+import { makeTd } from './render-table-row.js'; 
 
 const tBody = document.querySelector('tbody');
 
@@ -12,3 +14,17 @@ for (let i = 0; i < cart.length; i++) {
         
     tBody.appendChild(dom);
 }
+
+const placeTotal = () => {
+    const row = document.createElement('tr');
+    row.appendChild(makeTd(' '));
+    row.appendChild(makeTd(' '));
+    const totalHeader = (makeTd('Total Cost:'));
+    totalHeader.className = 'total-header';
+    row.appendChild(totalHeader);
+    row.appendChild(makeTd(totalCost(cart, instruments)));
+
+    tBody.appendChild(row);
+};
+
+placeTotal();

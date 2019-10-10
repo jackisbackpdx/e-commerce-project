@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 50%;
+    height: 300px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+td {
+    border-bottom: 1px solid black;
+    border-right: 1px dashed black;
+}
+th {
+    border: 1px solid turquoise;
+    background-color: darksalmon
+}
+td:hover {
+    background-color: grey;
+}
+.total-header {
+    font-weight: bold;
+    font-family: fantasy;
+}

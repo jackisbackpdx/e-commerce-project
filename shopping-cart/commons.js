@@ -1,5 +1,3 @@
-import { instruments } from '../products/app.js';
-import { cart } from '../data/cart.js';
 import { calcLineTotal } from './find-by-id.js';
  
 
@@ -12,9 +10,8 @@ function totalCost(cart, instruments) {
             }
         });    
     });
-    return total.toFixed(2);
+    return `$${total.toFixed(2)}`;
 }
 
-console.log(totalCost(cart, instruments));
 
 export default totalCost;
