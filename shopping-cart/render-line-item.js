@@ -1,6 +1,6 @@
 import { findProducts } from './find-by-id.js';
 import { makeTr } from './render-table-row.js';
-import { instruments } from '../products/app.js';
+import instruments from '../products/app.js';
 import { cart } from '../data/cart.js';
 import totalCost from './commons.js';
 import { makeTd } from './render-table-row.js'; 

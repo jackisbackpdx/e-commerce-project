@@ -1,4 +1,4 @@
-export function findProducts(instruments, code) {
+const findProducts = (instruments, code) => {
     for (let i = 0; i < instruments.length; i++) {
         const instrument = instruments[i];
         if (instrument.code === code) {
@@ -6,8 +6,9 @@ export function findProducts(instruments, code) {
         }
     }
     return null;
-}
+};
 
+export default findProducts;
 
 export const calcLineTotal = (quantity, price) => {
     return Number((quantity * price));

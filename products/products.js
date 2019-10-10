@@ -1,5 +1,5 @@
-import { renderInstrument } from './renderfunction.js';
-import { instruments } from './app.js';
+import renderInstrument from './renderfunction.js';
+import instruments from './app.js';
 
 const list = document.getElementById('instrument');
 

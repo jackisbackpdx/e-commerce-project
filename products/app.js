@@ -71,7 +71,7 @@ const drumKit = {
     }
 };
 
-export const instruments = [
+const instruments = [
     acousticGuitar,
     audioInterface,
     drumPad,
@@ -79,3 +79,5 @@ export const instruments = [
     focusrite,
     drumKit
 ];
+
+export default instruments;
