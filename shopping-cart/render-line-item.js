@@ -11,3 +11,8 @@ for (let i = 0; i < cart.length; i++) {
     
     tBody.appendChild(dom);
 }
+const button = document.querySelectorAll('button');
+for (let i = 0; i < instruments.length; i++) {
+    button[i].className = instruments[i].code;
+}
+

@@ -8,3 +8,4 @@ for (let i = 0; i < instruments.length; i++) {
     const dom = renderInstruments(instrument);
     list.appendChild(dom);
 }
+

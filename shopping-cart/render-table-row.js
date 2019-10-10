@@ -23,3 +23,5 @@ export const makeTr = (instrument, order) => {
     tableRow.appendChild(makeTd(prettyTotal));
     return tableRow;
 };
+
+
