@@ -1,4 +1,4 @@
-const renderInstrument = (instrument) => {
+export const renderInstruments = (instrument) => {
     const li = document.createElement('li');
     li.classList = instrument.category;
     li.title = instrument.description;
@@ -39,5 +39,3 @@ const renderInstrument = (instrument) => {
 
     return li;
 };
-
-export default renderInstrument;
