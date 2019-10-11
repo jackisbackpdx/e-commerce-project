@@ -62,7 +62,6 @@ const renderInstrument = (instrument) => {
         }
         else {
             lineItem.quantity++;
-            
         }
         json = JSON.stringify(cart);
         localStorage.setItem('CART', json);

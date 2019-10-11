@@ -1,11 +1,19 @@
-import { findProducts } from './find-by-id.js';
+import findProducts from './find-by-id.js';
 import { makeTr } from './render-table-row.js';
 import instruments from '../products/app.js';
-import { cart } from '../data/cart.js';
 import totalCost from './commons.js';
 import { makeTd } from './render-table-row.js'; 
 
 const tBody = document.querySelector('tbody');
+
+const json = localStorage.getItem('CART');
+let cart;
+if (json) {
+    cart = JSON.parse(json);
+    console.log(cart.code);
+} else {
+    cart = [];
+}
 
 for (let i = 0; i < cart.length; i++) {
     const lineItem = cart[i];
