@@ -10,6 +10,7 @@ const acousticGuitar = {
         return Math.floor(((this.price - this.salePrice) / this.price) * 100);
     }
 };
+
 const audioInterface = {
     code: 'Audio Interface',
     name: 'Subatomic Audio Interface',
@@ -22,6 +23,7 @@ const audioInterface = {
         return Math.floor(((this.price - this.salePrice) / this.price) * 100);
     }
 };
+
 const drumPad = {
     code: 'Electric Drum Pad',
     name: '9800 Martin\'s Drum Pad',
@@ -34,6 +36,7 @@ const drumPad = {
         return Math.floor(((this.price - this.salePrice) / this.price) * 100);
     }
 };
+
 const electricGuitar = {
     code: 'Electric Guitar',
     name: 'Fender Guitar',
@@ -46,6 +49,7 @@ const electricGuitar = {
         return Math.floor(((this.price - this.salePrice) / this.price) * 100);
     }
 };
+
 const focusrite = {
     code: 'Focusrite',
     name: 'Focusrite Audio Interface',
@@ -58,6 +62,7 @@ const focusrite = {
         return Math.floor(((this.price - this.salePrice) / this.price) * 100);
     }
 };
+
 const drumKit = {
     code: 'Drum Kit',
     name: 'Focusrite Audio Interface',
@@ -67,6 +72,7 @@ const drumKit = {
     price: 59.99,
     salePrice: 49.99,
     calcDiscount: function() {
+
         return Math.floor(((this.price - this.salePrice) / this.price) * 100);
     }
 };
