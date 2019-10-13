@@ -4,10 +4,19 @@
 }
 body {
     background: orange;
+    width: 100%;
+}
+html{
+    width: 100%;
 }
 .title-header {
     background: lightcoral;
-    border: 2px dashed black;
+    border: 2px solid black;
+}
+.title-header:hover {
+    border-bottom: 2px solid white;
+    transition-duration: 500ms;
+    cursor: pointer;
 }
 h1 {
     font-weight: bold;
@@ -19,6 +28,7 @@ h2 {
 a {
     text-decoration: none;
     color: black;
+    margin: 5px;
 }
 ul {
     list-style: none;
@@ -33,7 +43,7 @@ ul img {
     border: 2px dashed red;
 }
 li {
-    border: 5px solid black;
+    border: 3px solid black;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -43,6 +53,7 @@ li {
     background-color: grey;
     margin: 0 auto;
     margin-bottom: 10px;
+    text-align: center;
 }
 li:hover {
     transform:translate(3px, -3px); 
@@ -52,9 +63,12 @@ li:hover {
 button {
     background: lightcoral;
     border: 2px dashed black;
+    margin-top: 5px;
 }
 button:hover {
     cursor: pointer;
+    background-color: green;
+    transition-duration: 500ms;
 }
 .price {
     text-decoration: line-through;
@@ -63,4 +77,44 @@ button:hover {
 }
 .saleprice {
     font-weight: bold;
+}
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+input {
+    width: 20%;
+    text-align: center;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+div {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(orange, salmon, orange);
+    width: 100%;
+}
+div img {
+    width: 20%;
+    height: 500px;
+    margin-top: 20px;
+}
+div img:nth-of-type(2) {
+    width: 30%;
+}
+main:first-child {
+    width: 80%;
+}
+footer {
+    text-align: center;
+}
+blockquote {
+    font-weight: bold;
+    width: 90%;
+    font-size: 1.1rem;
 }

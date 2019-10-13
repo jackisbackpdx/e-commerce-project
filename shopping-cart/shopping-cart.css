@@ -1,13 +1,16 @@
 body {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: orange;
 }
 
 table {
     width: 50%;
-    height: 300px;
     border: 1px solid black;
     text-align: center;
+    background-color: white;
 }
 
 td {
@@ -21,7 +24,47 @@ th {
 td:hover {
     background-color: grey;
 }
-.total-header {
+
+button {
+    height: 20px;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: salmon;
+    cursor: pointer;
+}
+select {
+    height: 20px;
+}
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+.title-header {
+    background: lightcoral;
+    border: 2px solid black;
+    text-decoration: none;
+}
+.title-header:hover {
+    border-bottom: 2px solid white;
+    transition-duration: 500ms;
+}
+h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
     font-weight: bold;
-    font-family: fantasy;
 }

@@ -35,6 +35,11 @@ const renderInstrument = (instrument) => {
     discountP.textContent = discount;
     li.appendChild(discountP);
 
+    const input = document.createElement('input');
+    input.type = 'number';
+    input.id = 'input';
+    li.appendChild(input);
+
     const button = document.createElement('button');
     button.textContent = 'Add to Cart';
     button.value = instrument.code;
@@ -55,16 +60,17 @@ const renderInstrument = (instrument) => {
 
             lineItem = {
                 code: instrument.code,
-                quantity: 1
+                quantity: Number(input.value)
             };
 
             cart.push(lineItem);
         }
         else {
-            lineItem.quantity++;
+            lineItem.quantity += Number(input.value);
         }
         json = JSON.stringify(cart);
         localStorage.setItem('CART', json);
+        input.value = null;
     });
 
     li.appendChild(button);

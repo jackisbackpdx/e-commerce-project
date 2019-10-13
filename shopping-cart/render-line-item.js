@@ -10,7 +10,6 @@ const json = localStorage.getItem('CART');
 let cart;
 if (json) {
     cart = JSON.parse(json);
-    console.log(cart.code);
 } else {
     cart = [];
 }
@@ -36,3 +35,17 @@ const placeTotal = () => {
 };
 
 placeTotal();
+
+
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    const jsonParsed = JSON.parse(localStorage.getItem('CART'));
+    let itemsOrdered = '\n';
+    jsonParsed.forEach(item => {
+        itemsOrdered += item.quantity + ' ' + item.code + '\n';
+    });
+    alert(`You are ordering: ${itemsOrdered} Thank you for shopping with us!`);
+    localStorage.clear();
+    window.location.href = '../products/titlepage.html';
+});
+
