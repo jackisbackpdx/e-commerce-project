@@ -1,3 +1,5 @@
+import findProducts from '../shopping-cart/find-by-id.js';
+
 const renderInstrument = (instrument) => {
     const li = document.createElement('li');
     li.classList = instrument.category;
@@ -20,7 +22,7 @@ const renderInstrument = (instrument) => {
     li.appendChild(p);
 
     const saleP = document.createElement('p');
-    saleP.className = 'sale price';
+    saleP.className = 'saleprice';
 
     const saleUsd = '$' + instrument.salePrice.toFixed(2);
     saleP.textContent = saleUsd;
@@ -33,10 +35,47 @@ const renderInstrument = (instrument) => {
     discountP.textContent = discount;
     li.appendChild(discountP);
 
+    const input = document.createElement('input');
+    input.type = 'number';
+    input.id = 'input';
+    li.appendChild(input);
+
     const button = document.createElement('button');
     button.textContent = 'Add to Cart';
-    li.appendChild(button);
+    button.value = instrument.code;
+    button.setAttribute('min', 1);
+    button.addEventListener('click', function() { 
 
+        let json = localStorage.getItem('CART');
+        let cart;
+        if (json) {
+            cart = JSON.parse(json);
+        }
+        else {
+            cart = [];
+        }
+
+        let lineItem = findProducts(cart, instrument.code);
+        
+        if (!lineItem) {
+
+            lineItem = {
+                code: instrument.code,
+                quantity: Number(input.value)
+            };
+
+            cart.push(lineItem);
+        }
+        else {
+            lineItem.quantity += Number(input.value);
+        }
+        json = JSON.stringify(cart);
+        localStorage.setItem('CART', json);
+        input.value = null;
+    });
+
+    li.appendChild(button);
+    
     return li;
 };
 

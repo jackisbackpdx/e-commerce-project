@@ -1,5 +1,5 @@
 const acousticGuitar = {
-    id: 'acoustic guitar',
+    code: 'Acoustic Guitar',
     name: 'Acoustic Guitar',
     image: '../images/acousticguitar.jpg',
     description: 'Wooden acoustic guitar with wonderful melodic frequencies and harminous tones',
@@ -10,8 +10,9 @@ const acousticGuitar = {
         return Math.floor(((this.price - this.salePrice) / this.price) * 100);
     }
 };
+
 const audioInterface = {
-    id: 'advanced audio interface, meant for advanced sound engineers',
+    code: 'Audio Interface',
     name: 'Subatomic Audio Interface',
     image: '../images/audiointerface.jpg',
     description: 'This is a high quality instrument transmission device',
@@ -22,8 +23,9 @@ const audioInterface = {
         return Math.floor(((this.price - this.salePrice) / this.price) * 100);
     }
 };
+
 const drumPad = {
-    id: 'Electric Drum Pad',
+    code: 'Electric Drum Pad',
     name: '9800 Martin\'s Drum Pad',
     image: '../images/drumpad.jpg',
     description: 'Electric drum pad operated by pressing buttons',
@@ -34,8 +36,9 @@ const drumPad = {
         return Math.floor(((this.price - this.salePrice) / this.price) * 100);
     }
 };
+
 const electricGuitar = {
-    id: 'Electric Guitar',
+    code: 'Electric Guitar',
     name: 'Fender Guitar',
     image: '../images/electricguitar.jpg',
     description: 'Rock out to some riffs',
@@ -46,8 +49,9 @@ const electricGuitar = {
         return Math.floor(((this.price - this.salePrice) / this.price) * 100);
     }
 };
+
 const focusrite = {
-    id: 'focusrite',
+    code: 'Focusrite',
     name: 'Focusrite Audio Interface',
     image: '../images/focusrite.jpg',
     description: 'Electric drum pad operated by pressing buttons',
@@ -59,13 +63,27 @@ const focusrite = {
     }
 };
 
+const drumKit = {
+    code: 'Drum Kit',
+    name: 'Focusrite Audio Interface',
+    image: '../images/drumkit.jpeg',
+    description: 'Electric drum pad operated by pressing buttons',
+    category: 'Drums',
+    price: 59.99,
+    salePrice: 49.99,
+    calcDiscount: function() {
+
+        return Math.floor(((this.price - this.salePrice) / this.price) * 100);
+    }
+};
+
 const instruments = [
     acousticGuitar,
     audioInterface,
     drumPad,
     electricGuitar,
-    focusrite
+    focusrite,
+    drumKit
 ];
 
 export default instruments;
-
