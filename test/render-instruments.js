@@ -20,7 +20,7 @@ test('renders an instrument', assert => {
         }
     };
     // act
-    const expected = `<li class="Guitar" title="Wooden acoustic guitar with wonderful melodic frequencies and harminous tones"><h3>Acoustic Guitar</h3><img src="../images/acousticguitar.jpg" alt="Acoustic Guitar image"><p class="price">$75.00</p><p class="saleprice">$55.00</p><p class="discount">26% off!</p><input type="number" id="input"><button value="undefined">Add to Cart</button></li>`;
+    const expected = `<li class="Guitar" title="Wooden acoustic guitar with wonderful melodic frequencies and harminous tones"><h3>Acoustic Guitar</h3><img src="../images/acousticguitar.jpg" alt="Acoustic Guitar image"><p class="price">$75.00</p><p class="saleprice">$55.00</p><p class="discount">26% off!</p><input type="number" id="input"><button value="undefined" min="1">Add to Cart</button></li>`;
     
     const dom = renderInstrument(acousticGuitar);
     const html = dom.outerHTML;
