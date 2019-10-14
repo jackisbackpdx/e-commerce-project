@@ -3,26 +3,31 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: orange;
+    background-image: url('../images/print.png');
 }
 
 table {
     width: 50%;
     border: 1px solid black;
     text-align: center;
-    background-color: white;
+    background-color: grey;
+    border-spacing: 5px 5px;
 }
 
 td {
     border-bottom: 1px solid black;
     border-right: 1px dashed black;
+    padding: 3px;
+    background-color: white;
 }
 th {
     border: 1px solid turquoise;
-    background-color: darksalmon
+    background-color: darksalmon;
+    padding: 3px;
+    text-transform: uppercase;
 }
 td:hover {
-    background-color: grey;
+    background-color: wheat;
 }
 
 button {
@@ -55,7 +60,7 @@ a {
     border: 2px solid black;
     text-decoration: none;
 }
-.title-header:hover {
+a:hover {
     border-bottom: 2px solid white;
     transition-duration: 500ms;
 }
@@ -67,4 +72,13 @@ h2{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+}
+h1 {
+    width: 100%;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }

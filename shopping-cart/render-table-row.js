@@ -1,4 +1,4 @@
-import { makePrettyPrice } from './make-pretty-price.js';
+import { makePrettyPriceUSD } from './make-pretty-price.js';
 
 
 export const makeTd = (content) => {
@@ -9,13 +9,14 @@ export const makeTd = (content) => {
 };
 
 
+
 export const makeTr = (instrument, order) => {
     const tableRow = document.createElement('tr');
     
     const price = instrument.salePrice;
-    const prettyPrice = makePrettyPrice(price);
+    const prettyPrice = makePrettyPriceUSD(price);
     const totalPrice = order.quantity * instrument.salePrice;
-    const prettyTotal = makePrettyPrice(totalPrice);
+    const prettyTotal = makePrettyPriceUSD(totalPrice);
     
     tableRow.appendChild(makeTd(instrument.name));
     tableRow.appendChild(makeTd(order.quantity));

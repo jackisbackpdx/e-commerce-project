@@ -43,6 +43,7 @@ const renderInstrument = (instrument) => {
     const button = document.createElement('button');
     button.textContent = 'Add to Cart';
     button.value = instrument.code;
+    button.setAttribute('min', 1);
     button.addEventListener('click', function() { 
 
         let json = localStorage.getItem('CART');
