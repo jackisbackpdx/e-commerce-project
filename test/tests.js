@@ -1,1 +1,1 @@
-import './render-instruments.js';
+import './render-instruments.test.js';
