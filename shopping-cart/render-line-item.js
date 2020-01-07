@@ -4,7 +4,7 @@ import instruments from '../products/app.js';
 import totalCost from './commons.js';
 import { makeTd } from './render-table-row.js'; 
 
-const tBody = document.querySelector('tbody');
+const tableBody = document.querySelector('tbody');
 
 const json = localStorage.getItem('CART');
 let cart;
@@ -19,7 +19,7 @@ for (let i = 0; i < cart.length; i++) {
     const chosenInstrument = findProducts(instruments, lineItem.code);
     const dom = makeTr(chosenInstrument, lineItem);
         
-    tBody.appendChild(dom);
+    tableBody.appendChild(dom);
 }
 
 const placeTotal = () => {
@@ -31,7 +31,7 @@ const placeTotal = () => {
     row.appendChild(totalHeader);
     row.appendChild(makeTd(totalCost(cart, instruments)));
 
-    tBody.appendChild(row);
+    tableBody.appendChild(row);
 };
 
 placeTotal();
