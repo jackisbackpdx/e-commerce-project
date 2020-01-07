@@ -29,10 +29,9 @@ for (let i = 0; i < sounds.length; i++) {
 
     if (note === gSharp || note === bFlat || note === cSharp || note === eFlat || note === fSharp) {
         key.style.position = 'absolute';
-        key.style.backgroundColor = 'black';
         key.style.width = '50px';
         key.style.height = '120px';
-        key.classList.add('blackkey');
+        key.classList.add('black-key');
     } else {
         key.classList.add('key');
     }

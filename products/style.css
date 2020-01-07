@@ -14,7 +14,6 @@ body {
     display: flex;
     justify-content: center;
 }
-
 nav {
     background-color: rgb(212, 119, 139);
     display: flex;
@@ -102,11 +101,13 @@ blockquote {
     background-color: grey;
     cursor: cell;
 }
-
-.blackkey:hover {
-    background-color: white;
+.black-key {
+    background-color: black;
 }
-    
+.black-key:hover {
+    background-color: grey;
+    cursor: cell;
+}
 ::-webkit-scrollbar {
     width: 10px;
     display: none;
@@ -209,5 +210,3 @@ input {
     font-weight: bold;
     background-color: #efefef;
 }
-
-
